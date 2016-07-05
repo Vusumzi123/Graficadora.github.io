@@ -1,0 +1,217 @@
+/*!
+ *  URL: http:/mathtools.github.io
+ *  Description: Herramientas matematicas para estudiantes
+ *  Author: Vusumzi Belmont
+ *  Author URI:
+ *  Version: 1.0
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+section{
+	padding-top: 60px;
+}
+
+
+
+.well {
+    margin: auto;
+    width: 646px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+.canv {
+    margin: auto;
+    align-self: auto;
+    padding: 10px;
+}
+
+nav{
+	font-size: 0.9em;
+}
+
+#staticNav{
+	position: fixed;
+	width: 100%;
+  height: 50px;
+  background-color: #3e3e3e;
+
+  -webkit-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 9px 22px -4px rgba(0,0,0,0.75);
+
+}
+
+
+
+
+
+.navbar-default {
+  background-color: #3e3e3e;
+  border-color: #2d2c2d;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #73ad21;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #73ad21;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #73ad21;
+  background-color: #2d2c2d;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #73ad21;
+  background-color: #2d2c2d;
+}
+.navbar-default .navbar-toggle {
+  border-color: #2d2c2d;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #2d2c2d;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #73ad21;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #73ad21;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #73ad21;
+    background-color: #2d2c2d;
+  }
+}
+
+.active{
+	border-bottom: 4px solid #73AD21;	
+}
+
+.btn{
+  background-color: #73AD21;
+}
+
+.btn:hover {
+  background-color: rgb(250,256,256);
+}
+
+.info{
+  padding: 12px;
+}
+
+.footInfo{
+  width: 850px;
+  display: block;
+  margin: auto;
+  background-color:  #3e3e3e;
+  
+}
+
+footer{
+  background-color:  #3e3e3e;
+  color: #ecf0f1;
+  padding: 25px;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a.footer-brand:link,
+a.footer-brand:visited,
+a.footer-brand:active,
+a.footer-brand:hover{
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-family: "Comic Sans MS", cursive, sans-serif
+  padding:5px;
+  padding-bottom: 10px;
+}
+
+a.footer-brand:hover{
+  color: #73ad21; 
+
+}
+
+section {
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
+  -moz-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
+  box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
+
+}
+
+footer div.col-sm-4{
+  padding: 12px;
+}
+
+footer a.footlink:link,
+footer a.footlink:visited,
+footer a.footlink:active,
+footer a.footlink:hover{
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ecf0f1;
+  padding:5px;
+  padding-bottom: 10px;
+}
+
+footer a.footlink:hover{
+  color: #73ad21; 
+
+}
