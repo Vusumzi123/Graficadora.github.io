@@ -49,6 +49,7 @@ section{
 
 nav{
 	font-size: 0.9em;
+
 }
 
 #staticNav{
@@ -56,6 +57,7 @@ nav{
 	width: 100%;
   height: 50px;
   background-color: #3e3e3e;
+  z-index:9;
 
   -webkit-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0.75);
@@ -141,14 +143,6 @@ nav{
 	border-bottom: 4px solid #73AD21;	
 }
 
-.btn{
-  background-color: #73AD21;
-}
-
-.btn:hover {
-  background-color: rgb(250,256,256);
-}
-
 .info{
   padding: 12px;
 }
@@ -162,13 +156,14 @@ nav{
 }
 
 footer{
-  background-color:  #3e3e3e;
+  background-color: #3e3e3e;
   color: #ecf0f1;
   padding: 25px;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 a.footer-brand:link,
@@ -189,10 +184,13 @@ a.footer-brand:hover{
 }
 
 section {
-  margin-bottom: 50px;
-  -webkit-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
-  -moz-box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
-  box-shadow: 0px 9px 22px -4px rgba(0,0,0,0);
+  padding-top: 80px;
+  padding-bottom: 50px;
+  position: relative;
+  -webkit-box-shadow: 0px 8px 28px -1px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 8px 28px -1px rgba(0,0,0,1);
+  box-shadow: 0px 8px 28px -1px rgba(0,0,0,1);
+  color: rgb(125,125,138);
 
 }
 
@@ -214,4 +212,52 @@ footer a.footlink:hover{
 footer a.footlink:hover{
   color: #73ad21; 
 
+}
+
+.btn, .btn:hover, .btn:active, .btn-small, .btn-small:hover, .btn-small:active {
+
+  background-color: #73ad21;
+  color: #ecf0f1;
+
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  border: 0px solid #000000;
+
+  font-weight: bold;
+
+}
+
+.btn:hover, .btn-small:hover{
+
+  -webkit-box-shadow: 7px 7px 31px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 7px 31px -5px rgba(0,0,0,0.75);
+  box-shadow: 7px 7px 31px -5px rgba(0,0,0,0.75);
+}
+
+.btn:active{
+  -webkit-box-shadow: inset 7px 7px 31px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 7px 7px 31px -5px rgba(0,0,0,0.75);
+box-shadow: inset 7px 7px 31px -5px rgba(0,0,0,0.75);
+}
+
+input[type=text], select {
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-small{
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.input-small{
+  font-size: 0.7em;
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
 }

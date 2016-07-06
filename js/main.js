@@ -41,7 +41,7 @@ line(0,canvas.width/2,canvas.height,canvas.width/2);
 function fun(x){
     
     
-    this.y=Math.cos(x);
+    this.y=x;
     
     return this.y*sc*(-1);
 };
