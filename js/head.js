@@ -10,7 +10,7 @@ function Globals(){
   this.body = document.body;
 
   this.Globals = function() {
-    console.log(this.canvas);
+    //console.log(this.canvas);
     return true;
   };
 

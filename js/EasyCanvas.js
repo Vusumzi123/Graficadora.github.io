@@ -22,6 +22,7 @@ this.mouseX;
 this.mouseY;
 
 
+
 this.radius = 50.0;
 this.X; this.Y;
 this.nX, this.nY;
@@ -34,10 +35,9 @@ this.initCanvas = function(){
         this.mouseX = mX;
         this.mouseY = mY;
     });
-}
+};
 
 this.initCanvas();
-
 
 
 
@@ -47,7 +47,7 @@ this.rgb2hex = function(rgb) {
   	return ("0" + parseInt(x).toString(16)).slice(-2);
 }
  	return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-}
+};
 
 
 this.ellipse = function(x , y, w, h){
@@ -152,7 +152,7 @@ this.linearGrad= function(start, end, color1, color2){
     GradientVertical.addColorStop(0, color1);
     GradientVertical.addColorStop(1, color2);
   return GradientVertical;
-}
+};
 
 
 this.requestAnimationFrame =
@@ -163,7 +163,7 @@ this.requestAnimationFrame =
         window.oRequestAnimationFrame ||
         function(callback) {
           return setTimeout(callback, 1);
-    	}
+    	};
 
 //Fin del encabezado
 
