@@ -96,13 +96,13 @@ this.text = function(tex, x , y, s){
 	if(arguments.length<4){
 		this.ctx.font = "30px Arial";
 		this.ctx.fillText(tex,x,y);
-		this.ctx.strokeText(tex,x,y);
+		//this.ctx.strokeText(tex,x,y);
 		//console.log("funcion text");
 	}else{
 		var size= s+"px Arial";
 		this.ctx.font = size;
 		this.ctx.fillText(tex,x,y);
-		this.ctx.strokeText(tex,x,y);
+		//this.ctx.strokeText(tex,x,y);
 		//console.log("funcion text y size");
 	}
 };
@@ -154,6 +154,13 @@ this.linearGrad= function(start, end, color1, color2){
   return GradientVertical;
 };
 
+this.save = function(){
+  this.ctx.save();
+};
+
+this.restore = function(){
+  this.ctx.restore();
+};
 
 this.requestAnimationFrame =
         window.requestAnimationFrame ||
