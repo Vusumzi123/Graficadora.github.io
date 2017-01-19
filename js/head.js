@@ -8,9 +8,10 @@
 function Globals(){
   this.canvas = document.getElementById('myCanvas');
   this.body = document.body;
+  this.grid = $("#grid-check");
 
   this.Globals = function() {
-    //console.log(this.canvas);
+    console.log('globals set...');
     return true;
   };
 

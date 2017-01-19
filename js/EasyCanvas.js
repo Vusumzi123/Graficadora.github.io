@@ -162,6 +162,10 @@ this.restore = function(){
   this.ctx.restore();
 };
 
+this.drawImage = function(img,x,y){
+  this.ctx.drawImage(img,x,y);
+}
+
 this.requestAnimationFrame =
         window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
