@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>              <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>           <!--> <html class="no-js ie"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+        <!--[if IE ]>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <![endif]-->
+
+    <title>Graph-o.io</title>
+
+    <meta name="autor" content="Vusumzi Belmont" />
+    <meta name="description" content="Graficadora de funciones en 2 dimensiones"/>
+    <meta name="keywords" content="graph, JavaScript, graficadora, fi, ingenieria, calculo, geometria"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--jQuerry-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!--jQuerry UI 1.12-->
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="graph">
+
+    </div>
+
+    <div class="top-ui">
+
+      <header class="header">
+        <h2 class="header-brand"><a href="#">Graph-o</a></h2>
+        <nav class="navbar navbar-default navbar-custom" role="navigation">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Tools</a></li>
+              <li><a href="#">Ayuda</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+
+      <div class="function-pannel">
+        <div class="function-inst">
+          <div class="close-icon">
+            <a href="#">x</a>
+          </div>
+          <form class="function-form" action="index.html" method="get">
+            <input type="text" name="formula" value="" placeholder="x">
+            <input type="button" name="graph" value="graph">
+          </form>
+        </div>
+      </div>
+
+      <div class="toolbar">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

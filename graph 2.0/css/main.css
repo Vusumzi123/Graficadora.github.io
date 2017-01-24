@@ -1,0 +1,54 @@
+body html {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+.navbar-default {
+  background-image: none;
+  background-repeat: no-repeat; }
+
+.header {
+  width: 100%;
+  background-color: #404144; }
+  .header .navbar-custom {
+    color: #fff;
+    background-color: #404144;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    outline-offset: 0;
+    display: block; }
+    .header .navbar-custom div .navbar-nav *:hover {
+      background-color: #E64A19;
+      color: #fff; }
+    .header .navbar-custom div .navbar-nav .active {
+      border-bottom: 3px solid #E64A19; }
+  .header .header-brand {
+    color: #fff;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center; }
+    .header .header-brand * {
+      color: inherit; }
+
+.function-pannel {
+  right: 0px;
+  margin: 0;
+  background-color: #404144;
+  border-left: 1px solid #BDBDBD;
+  height: 100%;
+  width: 300px;
+  position: absolute; }
+
+.top-ui {
+  height: 100vh;
+  width: 100%;
+  position: fixed; }
+
+/*# sourceMappingURL=main.css.map */

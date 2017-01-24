@@ -1,0 +1,39 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  border-radius: $radius 0px 0px $radius;
+  -moz-border-radius: $radius 0px 0px $radius;
+  -ms-border-radius:$radius 0px 0px $radius;
+  -webkit-border-radius: $radius 0px 0px $radius;
+}
+
+@mixin border-radius-right($radius) {
+  border-radius: 0px $radius $radius 0px;
+  -moz-border-radius: 0px $radius $radius 0px;
+  -ms-border-radius:0px $radius $radius 0px;
+  -webkit-border-radius: 0px $radius $radius 0px;
+}
+
+@mixin border-radius-all($tl, $tr, $br, $bl) {
+  border-radius: $tl $tr $br $bl;
+  -moz-border-radius: $tl $tr $br $bl;
+  -ms-border-radius:$tl $tr $br $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+}
+
+@mixin box-shadow ($x, $y, $radius, $propagation, $color) {
+  -webkit-box-shadow: $x $y $radius $propagation $color;
+  -moz-box-shadow: $x $y $radius $propagation $color;
+  box-shadow: $x $y $radius $propagation $color;
+}
+
+@mixin box-shadow-in ($x, $y, $radius, $propagation, $color) {
+  -webkit-box-shadow: inset $x $y $radius $propagation $color;
+  -moz-box-shadow:  inset $x $y $radius $propagation $color;
+  box-shadow: inset $x $y $radius $propagation $color;
+}

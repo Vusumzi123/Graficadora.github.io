@@ -2,13 +2,14 @@ var main = function(vars) {
   var scale = 40;
   var canvas = new CanvasHead(vars);
   var grid = new Grid(canvas,vars);
-  var steps = ((canvas.width/2)/scale)/10;
+  var steps = 1;
   var plotbtn = $("#graficar");
-
-
   var Draw = function(){};
 
+
+
   function drawPlane(){
+  canvas.stroke('#000');
   canvas.strokeWeight(0.4);
   canvas.line(canvas.centerW,0,canvas.centerW,canvas.height);
   canvas.line(0,canvas.centerH,canvas.width,canvas.centerW);
@@ -49,32 +50,37 @@ var main = function(vars) {
   };
 
   function funct(formula,x,t){
-    this.x=x;
-    this.t=t;
     return eval(formula)*(-1);
   };
 
+  function distance(x1,x2,y1,y2){
+    return Math.sqrt((Math.pow(x2-x1,2))+(Math.pow(y2-y1)));
+  }
 
-  function fastPlot(x){
+
+  function fastPlot(x,formula){
     //console.log("plotting...");
-    var formula = getFormula();
+    //var progress;
     //canvas.clearCanvas();
     //drawPlane();
+    var x1=canvas.centerW+x*scale, y1=canvas.centerH+funct(formula,x)*scale, x2=canvas.centerW+(x+steps)*scale, y2 = canvas.centerH+funct(formula,(x+steps))*scale;
     canvas.fill('#0000cc');
     canvas.stroke('#0000cc');
-    canvas.line(canvas.centerW+x*scale,canvas.centerH+funct(formula,x)*scale,canvas.centerW+(x+steps)*scale,canvas.centerH+funct(formula,(x+steps))*scale);
-    canvas.line(canvas.centerW-x*scale,canvas.centerH+funct(formula,x*(-1))*scale,canvas.centerW-(x+steps)*scale,canvas.centerH+funct(formula,(x+steps)*(-1))*scale);
-    console.log(x);
+
+    canvas.point(x1,y1);
+    //canvas.line(canvas.centerW-x*scale,canvas.centerH+funct(formula,x*(-1))*scale,canvas.centerW-(x+steps)*scale,canvas.centerH+funct(formula,(x+steps)*(-1))*scale);
+    //progress = Math.round((x/300)*100);
+    //console.log(progress+"%..");
     if(x>canvas.width/2){
       return true;
     }
     x+=steps;
-    fastPlot(x);
+    fastPlot(x,formula);
   }
 
-  function plot(){
-    console.log("plotting..");
-    var formula = getFormula();
+  function plot(x,formula){
+    console.log("plotting...");
+
     var x=0;
     canvas.clearCanvas();
     /*if (grid.is(':checked')) {
@@ -83,16 +89,23 @@ var main = function(vars) {
     drawPlane();
 
     canvas.fill('#0000cc');
+    setTimeout(function(){
     Draw = function(){
-      canvas.point(canvas.centerW+x*scale,canvas.centerH+funct(formula,x)*scale);
-      canvas.point(canvas.centerW-x*scale,canvas.centerH+funct(formula,x*(-1))*scale);
+      canvas.point(canvas.centerW+(x*scale),canvas.centerH+funct(formula,x)*scale);
+      canvas.point(canvas.centerW-(x*scale),canvas.centerH+funct(formula,-x)*scale);
       x+=steps;
     };
+  },1000);
   };
+
+  function clearPlane(){
+    canvas.clearCanvas();
+    drawPlane();
+  }
 
 
   vars.grid.click();
-  plotbtn.click(function(){fastPlot(0);});
+  plotbtn.click(function(){var formula = getFormula();clearPlane();plot(-canvas.centerW,formula);});
   drawPlane();
   anim();
 }
