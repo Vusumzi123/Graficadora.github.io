@@ -1,9 +1,56 @@
 .function-pannel{
   right: 0px;
   margin: 0;
-  background-color: $primary-color;
+  background-color: $background-color;
   border-left: 1px solid $divider;
   height: 100%;
   width: 300px;
   position: absolute;
+
+  .pannel-navbar{
+    background-color: $primary-color;
+    color: $text;
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        border-bottom: 2px solid $primary-color;
+        a{
+          color: $ligth-text;
+          padding: 2px 8px 2px 8px;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: none;
+            color: $ligth-text;
+            background-color: $accent-color;
+          }
+        }
+      }
+      .active{
+        *{
+          border-bottom: 2px solid $accent-color;
+        }
+      }
+    }
+  }
+
+
+  .function-inst{
+    padding: 6px;
+    .close-icon{
+      position: absolute;
+      right: 0px;
+      *{
+        color: lighten($text, 30);
+        &:hover{
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
 }

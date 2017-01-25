@@ -11,7 +11,10 @@ body html {
 
 .header {
   width: 100%;
-  background-color: #404144; }
+  background-color: #404144;
+  -webkit-box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.4); }
   .header .navbar-custom {
     color: #fff;
     background-color: #404144;
@@ -40,11 +43,41 @@ body html {
 .function-pannel {
   right: 0px;
   margin: 0;
-  background-color: #404144;
+  background-color: #fff;
   border-left: 1px solid #BDBDBD;
   height: 100%;
   width: 300px;
   position: absolute; }
+  .function-pannel .pannel-navbar {
+    background-color: #404144;
+    color: #333; }
+    .function-pannel .pannel-navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .function-pannel .pannel-navbar ul li {
+        display: inline-block;
+        border-bottom: 2px solid #404144; }
+        .function-pannel .pannel-navbar ul li a {
+          color: #fff;
+          padding: 2px 8px 2px 8px;
+          text-align: center;
+          text-decoration: none; }
+          .function-pannel .pannel-navbar ul li a:hover {
+            text-decoration: none;
+            color: #fff;
+            background-color: #E64A19; }
+      .function-pannel .pannel-navbar ul .active * {
+        border-bottom: 2px solid #E64A19; }
+  .function-pannel .function-inst {
+    padding: 6px; }
+    .function-pannel .function-inst .close-icon {
+      position: absolute;
+      right: 0px; }
+      .function-pannel .function-inst .close-icon * {
+        color: gray; }
+        .function-pannel .function-inst .close-icon *:hover {
+          color: #E64A19; }
 
 .top-ui {
   height: 100vh;

@@ -1,6 +1,7 @@
 .header{
   width: 100%;
   background-color: $primary-color;
+  @include box-shadow (0, 3px, 8px, 1px, $shadows);
 
   .navbar-custom {
     color: $ligth-text;
