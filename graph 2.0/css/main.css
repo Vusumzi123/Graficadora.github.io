@@ -9,6 +9,17 @@ body html {
   background-image: none;
   background-repeat: no-repeat; }
 
+.close-i, .function-pannel .formulas .function-inst .close-icon, .function-pannel .tables .containner .table-inst .close-icon {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  width: 16px; }
+  .close-i *, .function-pannel .formulas .function-inst .close-icon *, .function-pannel .tables .containner .table-inst .close-icon * {
+    color: gray; }
+    .close-i *:hover, .function-pannel .formulas .function-inst .close-icon *:hover, .function-pannel .tables .containner .table-inst .close-icon *:hover {
+      color: #E64A19;
+      text-decoration: none; }
+
 .header {
   width: 100%;
   background-color: #404144;
@@ -57,7 +68,7 @@ body html {
       padding: 0; }
       .function-pannel .pannel-navbar ul li {
         display: inline-block;
-        border-bottom: 2px solid #404144; }
+        border-bottom: 3px solid #404144; }
         .function-pannel .pannel-navbar ul li a {
           color: #fff;
           padding: 2px 8px 2px 8px;
@@ -66,22 +77,48 @@ body html {
           .function-pannel .pannel-navbar ul li a:hover {
             text-decoration: none;
             color: #fff;
+            border-bottom: 3px solid #E64A19;
             background-color: #E64A19; }
       .function-pannel .pannel-navbar ul .active * {
-        border-bottom: 2px solid #E64A19; }
-  .function-pannel .function-inst {
-    padding: 6px; }
-    .function-pannel .function-inst .close-icon {
-      position: absolute;
-      right: 0px; }
-      .function-pannel .function-inst .close-icon * {
-        color: gray; }
-        .function-pannel .function-inst .close-icon *:hover {
-          color: #E64A19; }
+        border-bottom: 3px solid #E64A19; }
+  .function-pannel .formulas {
+    display: none; }
+    .function-pannel .formulas .function-inst {
+      padding: 6px; }
+  .function-pannel .tables {
+    display: block; }
+    .function-pannel .tables .containner {
+      padding: 6px;
+      display: flex;
+      padding-top: 50px;
+      align-items: center;
+      justify-content: center; }
+      .function-pannel .tables .containner .table-inst {
+        width: 200px; }
+        .function-pannel .tables .containner .table-inst tr {
+          border-left: 1px solid #BDBDBD; }
+          .function-pannel .tables .containner .table-inst tr th {
+            border-right: 1px solid #BDBDBD;
+            text-align: center;
+            padding: 12px; }
+          .function-pannel .tables .containner .table-inst tr td {
+            border-top: 1px solid #BDBDBD;
+            border-right: 1px solid #BDBDBD; }
+            .function-pannel .tables .containner .table-inst tr td .cell {
+              padding: 12px;
+              text-align: center;
+              width: 80px;
+              border: none; }
 
 .top-ui {
   height: 100vh;
   width: 100%;
   position: fixed; }
+
+.Map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -3; }
 
 /*# sourceMappingURL=main.css.map */
