@@ -15,17 +15,14 @@
     <meta name="keywords" content="graph, JavaScript, graficadora, fi, ingenieria, calculo, geometria"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <!--jQuerry-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-    <!--jQuerry UI 1.12-->
-    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
-    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
     <!--Fontawesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,6 +37,7 @@
 
     <div class="top-ui">
 
+      <!--
       <header class="header">
         <h2 class="header-brand"><a href="#">Graph-o</a></h2>
         <nav class="navbar navbar-default navbar-custom" role="navigation">
@@ -57,31 +55,66 @@
           </div>
         </nav>
 
+      </header>-->
+
+      <header>
+        <nav class="nav-extended">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Graph-O</a>
+          </div>
+          <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#">Tools</a></li>
+              <li class="tab"><a href="#">Ayuda</a></li>
+              <li class="tab"><a href="#">Nosotros</a></li>
+              <li class="tab"><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
       </header>
 
       <div class="function-pannel">
 
-        <nav class="nav pannel-navbar">
-          <ul>
-            <li><a href="#">formula</a></li>
-            <li class="active"><a href="#">table</a></li>
-            <li><a href="#">advanced</a></li>
-          </ul>
+        <nav class="nav-extended">
+          <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#formula">formula</a></li>
+              <li class="tab"><a href="#table">table</a></li>
+              <li class="tab"><a href="#advanced">advanced</a></li>
+            </ul>
+          </div>
         </nav>
 
-        <div class="formulas">
-          <div class="function-inst">
-            <div class="close-icon">
-              <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-            </div>
-            <form class="function-form" action="index.html" method="get">
-              <input type="text" name="formula" value="" placeholder="x">
-              <input type="button" name="graph" value="graph">
-            </form>
-          </div>
+        <div class="formulas" id="formula">
+
+          <ul class="collection">
+
+            <li class="collection-item avatar function-inst act">
+              <i class="material-icons circle blue">1</i>
+              <form class="function-form" action="index.html" method="post">
+                <div class="input-field inline">
+                  <input id="formula" type="text" class="validate">
+                  <label for="formula" data-error="wrong" data-success="right">f(x)</label>
+                </div>
+              </form>
+              <a href="#!" class="secondary-content"><i class="material-icons">plott</i></a>
+            </li>
+
+            <li class="collection-item avatar function-inst">
+              <i class="material-icons circle green">2</i>
+              <form class="function-form" action="index.html" method="post">
+                <div class="input-field inline">
+                  <input id="formula" type="text" class="validate">
+                  <label for="formula" data-error="wrong" data-success="right">f(x)</label>
+                </div>
+              </form>
+              <a href="#!" class="secondary-content"><i class="material-icons">plott</i></a>
+            </li>
+          </ul>
+
         </div>
 
-        <div class="tables">
+        <div class="tables" id="table">
           <div class="containner">
             <div class="table-inst">
               <div class="close-icon">
@@ -117,7 +150,16 @@
       </canvas>
     </div>
 
-
+    <!--jQuerry-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!--jQuerry UI 1.12
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>-->
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="js/EasyCanvas.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/head.js"></script>
     <script type="text/javascript" src="js/Grid.js"></script>

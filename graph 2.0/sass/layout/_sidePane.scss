@@ -1,86 +1,50 @@
 .function-pannel{
-  right: 0px;
-  margin: 0;
-  background-color: $background-color;
-  border-left: 1px solid $divider;
-  height: 100%;
-  width: 300px;
   position: absolute;
+  right: 0px;
+  display: block;
+  width: 320px;
+  background-color: $ligth-text;
+  height: 100%;
+  @include box-shadow (-1px, 0px, 2px, 1px, $shadows);
 
-  .pannel-navbar{
+  .nav-extended{
     background-color: $primary-color;
-    color: $text;
-    ul{
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      li{
-        display: inline-block;
-        border-bottom: 3px solid $primary-color;
-        a{
-          color: $ligth-text;
-          padding: 2px 8px 2px 8px;
-          text-align: center;
-          text-decoration: none;
-
-          &:hover{
-            text-decoration: none;
-            color: $ligth-text;
-            border-bottom: 3px solid $accent-color;
-            background-color: $accent-color;
+    .nav-content{
+      ul{
+        li{
+          a{
+            padding: 0 18px 0 18px;
           }
-        }
-      }
-      .active{
-        *{
-          border-bottom: 3px solid $accent-color;
         }
       }
     }
   }
 
-  .formulas{
-    display: none;
-    .function-inst{
-      padding: 6px;
-      .close-icon{
-        @extend .close-i;
-      }
+
+}
+
+.formulas{
+  .function-inst{
+    .close-icon{
+      @extend .close-i;
+    }
+    i{
+      display:none !important;
+    }
+    form{
+      display: none;
+    }
+    &:hover{
+      background-color: darken(white, 6%);
     }
   }
-
-  .tables{
-    display: block;
-    .containner{
-      padding: 6px;
-      display: flex;
-      padding-top: 50px;
-      align-items: center;
-      justify-content: center;
-      .table-inst{
-        width: 200px;
-        tr{
-          border-left: 1px solid $divider;
-          th{
-            border-right: 1px solid $divider;
-            text-align: center;
-            padding: 12px;
-          }
-          td{
-            border-top: 1px solid $divider;
-            border-right: 1px solid $divider;
-            .cell{
-              padding: 12px;
-              text-align: center;
-              width: 80px;
-              border: none;
-            }
-          }
-        }
-        .close-icon{
-          @extend .close-i;
-        }
-      }
+  .act{
+    max-height: auto;
+    i{
+      display:block !important;
+    }
+    form{
+      display: block !important;
     }
   }
 }

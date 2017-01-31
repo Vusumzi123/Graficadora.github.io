@@ -1,0 +1,128 @@
+.function-pannel{
+  right: 0px;
+  margin: 0;
+  background-color: $background-color;
+  border-left: 1px solid $divider;
+  height: 100%;
+  width: 300px;
+  position: absolute;
+
+  .pannel-navbar{
+    background-color: $primary-color;
+    color: $text;
+    @include box-shadow (0, 2px, 2px, 1px, $shadows);
+    margin-bottom: 4px;
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        border-bottom: 3px solid $primary-color;
+        a{
+          color: $ligth-text;
+          padding: 2px 8px 2px 8px;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: none;
+            color: $ligth-text;
+            border-bottom: 3px solid $accent-color;
+            background-color: $accent-color;
+          }
+        }
+      }
+      .active{
+        *{
+          border-bottom: 3px solid $accent-color;
+        }
+      }
+    }
+  }
+
+  .formulas{
+    display: block;
+    padding: 5px 12px;
+    .function-inst{
+      @include box-shadow (0, 2px, 4px, 1px, $shadows);
+      padding: 6px;
+      border-left: 3px solid $accent-color;
+      &:hover{
+        background-color: darken($ligth-text, 5%);
+      }
+      .close-icon{
+        @extend .close-i;
+      }
+      .in-line{
+        *{
+          padding: 0px 3px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .button{
+          color: $accent-color;
+          background-color: transparent;
+          border: none;
+          &:active:not(.fa-area-chart){
+            color: lighten($accent-color,20%);
+            border: none;
+            outline: none;
+            position: relative;
+            top: 2px;
+          }
+          &:hover:not(.fa-area-chart){
+            color: lighten($accent-color,20%);
+            border: none;
+            outline: none;
+            text-shadow: 0 3px 8px $shadows;
+          }
+          &:focus{
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+        input[type="text"]{
+          padding: 4px
+        }
+      }
+    }
+  }
+
+  .tables{
+    display: none;
+    .containner{
+      padding: 6px;
+      display: flex;
+      padding-top: 50px;
+      align-items: center;
+      justify-content: center;
+      .table-inst{
+        width: 200px;
+        tr{
+          border-left: 1px solid $divider;
+          th{
+            border-right: 1px solid $divider;
+            text-align: center;
+            padding: 12px;
+          }
+          td{
+            border-top: 1px solid $divider;
+            border-right: 1px solid $divider;
+            .cell{
+              padding: 12px;
+              text-align: center;
+              width: 80px;
+              border: none;
+            }
+          }
+        }
+        .close-icon{
+          @extend .close-i;
+        }
+      }
+    }
+  }
+}

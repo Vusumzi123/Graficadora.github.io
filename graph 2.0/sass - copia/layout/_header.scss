@@ -1,0 +1,40 @@
+.header{
+  width: 100%;
+  background-color: $primary-color;
+  @include box-shadow (0, 2px, 4px, 1px, $shadows);
+
+  .navbar-custom {
+    color: $ligth-text;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    outline-offset: 0;
+    display: block;
+    div{
+      .navbar-nav{
+        *:hover{
+          color: white;
+        }
+        .active{
+          border-bottom: 3px solid $accent-color;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .header-brand{
+    color: $ligth-text;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    * {
+      color: inherit;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 .close-i{
-  position: relative;
-  display: block;
-  margin-left: auto;
+  position: absolute;
+  right: 0px;
   width: 16px;
   *{
     color: lighten($text, 30);
