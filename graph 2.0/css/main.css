@@ -16,6 +16,18 @@ body html {
       color: #E64A19;
       text-decoration: none; }
 
+.cir {
+  width: 30px;
+  height: 30px;
+  color: white !important;
+  vertical-align: middle;
+  display: -webkit-flex;
+  display: flex !important;
+  text-align: center !important;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 15px; }
+
 header .nav-extended {
   text-decoration: none;
   background-color: #404144 !important; }
@@ -30,7 +42,7 @@ header .nav-extended {
   position: absolute;
   right: 0px;
   display: block;
-  width: 320px;
+  width: 340px;
   background-color: #fff;
   height: 100%;
   -webkit-box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -41,14 +53,31 @@ header .nav-extended {
     .function-pannel .nav-extended .nav-content ul li a {
       padding: 0 18px 0 18px; }
 
-.formulas .function-inst i {
+.formulas .btn-floating {
+  position: fixed;
+  bottom: 8px;
+  right: 8px; }
+.formulas .collection {
+  height: 70vh;
+  overflow-y: auto; }
+.formulas .function-inst .row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0; }
+.formulas .function-inst .formula-name {
+  display: block !important; }
+.formulas .function-inst .input-field {
   display: none !important; }
-.formulas .function-inst form {
-  display: none; }
 .formulas .function-inst:hover {
   background-color: #f0f0f0; }
 .formulas .act {
   max-height: auto; }
+  .formulas .act .input-field {
+    display: block !important; }
+  .formulas .act .formula-name {
+    display: none !important; }
   .formulas .act i {
     display: block !important; }
   .formulas .act form {
