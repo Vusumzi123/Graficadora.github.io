@@ -1,48 +1,27 @@
-var Grid = function(canvas,vars){
-  this.img = new Image;
-  this.grid = vars.grid;
+var Grid = function(vars, can){
+  this.canvas = new CanvasHead(vars,can);
+  this.scale = vars.scale;
 
-  /*this.setCanvas = function(){
-    this.img.src=canvas.canvas.toDataURL()+"";
-  };
+  this.drawGrid = function(){
+    this.canvas.fill("#999");
+    this.canvas.stroke("#999");
+    this.canvas.strokeWeight(0.2);
 
-  this.getCanvas = function(){
-    if(this.img.src!=""){
-      canvas.clearCanvas();
-      canvas.drawImage(this.img,0,0);
-      return true;
-    }else {
-      console.log('no save state');
-      return false;
-    };
+    console.log("scale: "+this.scale);
 
-  }*/
-
-  this.gridIsOn = function(){
-    if(this.grid.is(':checked')){
-      return true;
-    }else{
-      return false;
+    for(var i=0; i<((this.canvas.width/this.scale)/2); ++i){
+      this.canvas.line(this.canvas.centerW+i*this.scale,0,this.canvas.centerW+i*this.scale,this.canvas.height);
+      this.canvas.line(this.canvas.centerW-i*this.scale,0,this.canvas.centerW-i*this.scale,this.canvas.height);
+    }
+    for(var i=0; i<((this.canvas.height/this.scale)/2); i++){
+      this.canvas.line(0,this.canvas.centerH+i*this.scale,this.canvas.width,this.canvas.centerH+i*this.scale);
+      this.canvas.line(0,this.canvas.centerH-i*this.scale,this.canvas.width,this.canvas.centerH-i*this.scale);
     }
   }
 
-  this.draw = function(){
-    canvas.strokeWeight(0.1);
-    for(var i = 0; i < canvas.height/2; i+=scale){
-      canvas.line(0,canvas.centerH+i,canvas.width,canvas.centerH+i);
-      canvas.line(0,canvas.centerH-i,canvas.width,canvas.centerH-i);
-      canvas.line(canvas.centerH+i,0,canvas.centerH+i,canvas.width);
-      canvas.line(canvas.centerH-i,0,canvas.centerH-i,canvas.width);
-    }
+  this.isActive = function(check){
+    if(check===true){
+      this.drawGrid();
+    }else this.canvas.clearCanvas();
   }
-
-  this.Grid = function(){
-    if(this.gridIsOn()){
-      
-    }else{
-
-    }
-  };
-
-  this.Grid();
 }

@@ -1,5 +1,10 @@
 header{
+  height: 112px !important;
+  position: fixed;
+  z-index: 13;
+  width: 100vw;
   .nav-extended{
+    height: 112px !important;
     text-decoration: none;
     background-color: $primary-color !important;
     *{

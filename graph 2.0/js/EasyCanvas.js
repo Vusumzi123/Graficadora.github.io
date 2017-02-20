@@ -5,10 +5,10 @@
 
 //Encabezado para facilitar el uso de Canvas
 
-var CanvasHead = function(vars) {
+var CanvasHead = function(vars, canvas) {
 
-this.canvas=vars.canvas;
-this.ctx = vars.canvas.getContext("2d");
+this.canvas= canvas;
+this.ctx = canvas.getContext("2d");
 this.ctx.fillStyle="white";
 this.ctx.textAlign="center";
 this.eWith=1;
@@ -76,11 +76,12 @@ this.line = function(x1,y1,x2,y2) {
 
 this.point = function(x,y){
 	this.ctx.fillStyle=this.scolorBuffer;
-	this.ctx.beginPath();
-	this.ctx.ellipse(x, y, this.eWith, this.eWith, 0, 0, 2*Math.PI);
+	/*this.ctx.ellipse(x, y, this.eWith, this.eWith, 0, 0, 2*Math.PI);
 	this.ctx.closePath();
 	this.ctx.fill();
-	this.restoreColor();
+	this.restoreColor();*/
+  this.rect(x,y,0.5,0.5);
+	this.ctx.stroke();
 };
 
 
